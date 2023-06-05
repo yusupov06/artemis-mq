@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: 2002
+    url: jdbc:postgresql://localhost:5432/artemis
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        enable_lazy_load_no_trans: true
+  artemis:
+    broker-url: tcp://localhost:61616
+    mode: native
+    user: test
+    password: test
+server:
+  port: 8082
+
+

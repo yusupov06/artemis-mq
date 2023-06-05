@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: 2002
+    url: jdbc:postgresql://localhost:5432/artemis
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+    properties:
+      hibernate:
+        enable_lazy_load_no_trans: true
+  artemis:
+    mode: embedded
+    embedded:
+      data-directory: ./data
+      enabled: true
+      queues: exampleQueue
+server:
+  port: 8082
+
+mq:
+  product-ms: simulation
+  order-ms: simulation
+
